@@ -14,7 +14,7 @@
 - Requires `docker` and `python`
 
 ```sh
-./start.sh
+./local-start.sh
 ```
 
 Starts application locally on port `8080`.
