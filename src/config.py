@@ -26,6 +26,15 @@ logging.config.dictConfig({
 })
 
 app = Flask(__name__)
-app.config["EXAMPLE_CONFIG_KEY"] = "VALUE"
-# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///:memory:"
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite3"
+
+def create_config():
+    config = {}
+    config["EXAMPLE_CONFIG_KEY"] = "VALUE"
+    # app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///:memory:"
+    config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite3"
+    # config["DEBUG"] = "1"
+    # config["TESTING"] = True
+    return config
+
+from controllers.health import Health
+from controllers.example import ExampleListAPI, ExampleAPI
