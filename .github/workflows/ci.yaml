@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build:
-    uses: mlschuweiler/.github/.github/workflows/ci-python.yaml@main
+    uses: mlschuweiler/cicd-workflows/.github/workflows/ci-python.yaml@main
     secrets: inherit
     with:
-      additional_pytest_options: "--cov=src/ test/"
+      additional_pytest_options: "--cov=src/ tests/"
